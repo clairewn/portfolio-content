@@ -1,3 +1,517 @@
-img{
+body {
+    background-image: url('../images/gray.jpeg');
+    font-family: "League Spartan", sans-serif;
+}
+
+p {
+    margin: 15px;
+    font-size: 14pt;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: "League Spartan", sans-serif;
+}
+@media screen and (min-width: 1200px) {
+    p {
+        margin: 45px;
+    }
+}
+
+h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 20pt;
+}
+
+footer {
+    background-color: #334d00;
+    text-align: center;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+footer p {
+    font-size: 12pt;
+    color: white;
+}
+
+.ch {
+    display: none;
+}
+
+button {
+    margin: 0 auto;
+    margin-top: 25px;
+    display: block;
+    font-size: 14pt;
+    padding: 5px;
+    background-color: #676152;
+    color:rgb(252, 252, 252);
+}
+
+@media screen and (min-width: 700px){
+    #languageFront {
+        position: absolute;
+        right: 30px;
+        top: 510px;
+    }
+    #language {
+        position: absolute;
+        right: 30px;
+        top: 60px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #languageFront {
+        top: 460px;
+    }
+    #language {
+        top: 20px;
+    }
+}
+
+/* skip to main content */
+a.skip{
+    background: white;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: left 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    left: -500px;
+}
+
+@media screen and (min-width: 700px){
+    a.skip:focus {
+        left: 0px;
+        top: 20px;
+      }
+}
+
+
+/* image styling */
+#camera {
+    display: block;
+    margin: auto;
+}
+
+img {
+    width: 325px;
+    margin: 5px;
+}
+
+img:not(#camera){
+    border: 3px solid #477d55;
+    margin-bottom: 8px;
+    padding: 1px;
+    border-radius: 5%;
+}
+
+img:hover:not(#camera) {
+    box-shadow: 10px 10px #477d55;
+}
+
+.gallery figure:nth-child(odd) img{
+    border: 3px solid #415ba1;
+}
+
+.gallery figure:nth-child(odd) img:hover {
+    box-shadow: 10px 10px #415ba1;
+}
+
+figure {
+    display: table;
+    margin: 10px;
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+}
+
+/* grid */
+.gridGallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 700px){
+    .gridGallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    #E {
+        grid-column: 1 / span 2; 
+    }
+    #N {
+        grid-row: 3 / span 2;
+    }
+    #S {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .gridGallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #F {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+    }
+    #G, #H, #I {
+        grid-row: 3 / span 2;
+    }
+    #G {
+        grid-column: 2;
+    }
+    #H {
+        grid-column: 1;
+    }
+    #I {
+        grid-column: 3;
+    }
+    #E {
+        grid-column: 2;
+    }
+    #N {
+        grid-row: 2 / span 2;
+        grid-column: 2;
+    }
+    #R {
+        grid-column: 2;
+    }
+    #S {
+        grid-row: 1 / span 2;
+        grid-column: 2;
+    }
+    #specialgrid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* home page */
+#factGenerator {
+    text-align: center;
+}
+#wildlife {
+    display: none;
+}
+#landscape {
+    display: none;
+}
+.generatorLink {
+    background-color: #334d00;
+    padding: 10px;
+    color: white;
+    font-size: 16pt;
+    border: 1px solid grey;
+}
+
+@media screen and (min-width: 700px){
+    .homeflex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .homeflex p {
+        margin-left: 15px;
+        margin-right: 15px;
+        flex-grow: 2;
+    }
+    #hometext{
+        display: inline-block;
+        width: 550px;
+    }
+    .parallex {
+        background-image: url('../images/parallex.jpg');
+        background-color: #707070;
+        min-height: 240px;
+        margin-top: 0px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 200px;
+        font-size:32pt;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .homeflex {
+        flex-direction: column;
+    }
+    #hometext {
+        width: auto;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    #parallex {
+        min-height: 550px;
+    }
+}
+
+/* animation */
+
+#animation {
+    animation-duration: 5s;
+    animation-name: logo_animation;
+}
+
+@keyframes logo_animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* flip card */
+.flip-card {
+    background-color: transparent;
+    width: 325px;
+    height: 245px;
+    perspective: 1000px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* https://stackoverflow.com/questions/62418249/css-flip-card-how-can-i-activate-the-flip-via-tab-so-it-is-keyboard-accessible */
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus-within .flip-card-inner,
+  .flip-card:active .flip-card-inner,
+  .flip-card:focus .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color: #477d55;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+/* reduce motion */
+
+@media screen and (prefers-reduced-motion) {
+    #animation {
+        animation-duration: 0s;
+    }
+    #intro{
+        background-attachment: initial;
+    }
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus-within .flip-card-inner,
+    .flip-card:active .flip-card-inner,
+    .flip-card:focus .flip-card-inner {
+        transform: none;
+    }
+}
+
+/* navigation styling */
+
+nav {
+    width: 100%;
+    background-color:#334d00;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+nav li{ 
+    background-color:#334d00;
+    text-align: center;
+    font-size: 18pt;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid grey;
+    margin: 0px;
+    min-height: 35px;
+}
+
+
+@media screen and (min-width: 700px){
+    nav li {
+        width: 50%
+    }
+    .nav_links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    nav li {
+        width: 15%;
+        border: none;
+    }
+    .home {
+        margin-right: auto;
+    }
+}
+
+.active {
+    background-color: #446600;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+nav li:hover{
+    text-decoration: underline;
+}
+
+ul a{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+/* form styling */
+form {
+    border: 3px solid #334d00;
+    padding: 5px;
+    display: block;
+    margin: auto;
     width: 200px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    background-color:#477d55;
+}
+
+@media screen and (min-width: 700px){
+    form {
+        width: 300px;
+        margin-right: 15px;
+    }
+    textarea {
+        height: 150px;
+    }
+
+}
+
+@media screen and (min-width: 1200px){
+    form {
+        width: 600px;
+        margin: auto;
+    }
+    .formflex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .form_entry{
+        margin-right: 45px;
+        margin-bottom: 35px;
+    }
+    textarea {
+        height: 200px;
+        width: 525px;
+    }
+}
+
+
+legend {
+    margin-bottom: 20px;
+    padding-top: 5px;
+    font-size: 20px;
+    color: rgb(252, 252, 252);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: rgb(252, 252, 252);
+}
+
+input {
+    display: block;
+    margin-bottom: 6px;
+}
+
+textarea {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* game */
+#gameSpace h1 {
+    font-size: 18pt;
+    color: rgb(234, 226, 226);
+    font-weight: bold;
+    font-style: oblique;
+}
+#correct {
+    display: none;
+}
+#Claire {
+    display: block;
+}
+#Eric {
+    display: none;
+}
+#Mom {
+    display: none;
+}
+#Dad {
+    display: none;
+}
+.gamePic {
+    margin: auto;
+}
+
+#gameSpace {
+    background-color:#477d55;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+#gameSpace p {
+    margin-top: 8px;
+    color: rgb(255, 255, 255);
+}
+.gameButton {
+    display: inline-block;
+    margin: 8px;
+}
+@media screen and (min-width: 700px){
+    .gamePic {
+        width: 450px;
+    }
+}
+@media screen and (min-width: 1200px){
+    .gamePic {
+        width: 650px;
+    }
 }

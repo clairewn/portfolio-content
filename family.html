@@ -3,34 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/icon.png">
+	<link rel="icon" href="images/camera.png">
 	<link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/all.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Family</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXMT8M416L"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-XXMT8M416L');
+	</script>
 </head>
+
+
+
 <body>
+
+    <a class = "skip" href="#main">Skip to Main Content</a>
 	<header>
 	  <nav>
-		<ul>
-			<li><a href = "index.html">About Me</a></li>
-			<li><a href = "landscape.html">Landscape</a></li>
-			<li><a href = "wildlife.html">Wildlife</a></li>
-			<li><a href = "family.html">Family</a></li>
+		<ul class="nav_links">
+			<li class="home"><a href = "index.html"><i class="fa-solid fa-camera"></i> About</a></li>
+			<li><a href = "landscape.html"><i class="fa-solid fa-mountain-sun"></i> Landscape</a></li>
+			<li><a href = "wildlife.html"><i class="fa-solid fa-cow"></i> Wildlife</a></li>
+			<li class="active"><a href = "family.html"><i class="fa-solid fa-people-group"></i> Family</a></li>
 		</ul>
 	  </nav>
-	  <h1>Family</h1>
+	  <h1 id="main">Family</h1>
 	</header>
 
-	
+
+
+
+
 	<main>
-        <p>Besides taking pictures of nature and wildlife, Dad likes to take pictures of the rest of us as well. 
+        <button onclick="changeLanguage(this)" id="language">中文</button>
+        <p class="en">Besides taking pictures of nature and wildlife, Dad likes to take pictures of the rest of us as well. 
             He has always loved taking pictures of us since I was very little. 
             We have lots of videos and photos from childhood that are a classic.
             He came to every single of my sports competitions and my brothers' to take pictures of the whole team.
             That means we have always all got really nice pictures.
             Unfortunately that means he's not in a lot of pictures.
         </p>
-        <p>
+        <p class="ch">
             除了给大自然和野生动物拍照，爸爸也喜欢给我们其他人拍照。
             从我很小的时候起，他就一直喜欢给我们拍照。
             我们有很多经典的童年视频和照片。
@@ -38,6 +56,8 @@
             这意味着我们总是得到非常好的照片。
             不幸的是，这意味着他不在很多照片中。
         </p>
+
+        <div class='gridGallery' id="specialgrid">
 		<figure>
             <img src = "images/claireeric.jpg" alt = "claire and eric by a river"/>
             <figcaption>Claire and Eric by Snake River</figcaption>
@@ -46,13 +66,18 @@
             <img src = "images/momclaire.jpg" alt = "mom posing with claire stretching in the background at an overlook"/>
             <figcaption>Mom and Claire at Overlook</figcaption>
         </figure>
-        <p>The rest of the family also loves taking pictures too. That means that occasionally Dad will make it in the pictures!
+        </div>
+
+        <p class="en">The rest of the family also loves taking pictures too. That means that occasionally Dad will make it in the pictures!
             Here are instances where my dad caught us all taking pictures and a photo where he makes it in.
         </p>
-        <p>
+        <p class="ch">
             家里的其他人也喜欢拍照。 这意味着爸爸偶尔会出现在照片中!
             以下是我父亲抓到我们都在拍照的例子，还有一张他进去的照片。
         </p>
+        
+
+        <div class='gridGallery'>
         <figure>
             <img src = "images/clairecamera.jpg" alt = "claire takes photo of old faithful with camera"/>
             <figcaption>Claire Steals Dad's Camera to Take Photos</figcaption>
@@ -62,10 +87,6 @@
             <figcaption>Mom Takes Photos on iPhone</figcaption>
         </figure>
 		<figure>
-            <img src = "images/ericpic.jpg" alt = "eric taking a picture on his phone"/>
-            <figcaption>Eric Takes a Photo on Phone</figcaption>
-        </figure>
-		<figure>
             <img src = "images/ericozmo.jpg" alt = "eric takes a panorma picture with ozmo"/>
             <figcaption>Eric Takes a Photo on Ozmo</figcaption>
         </figure>
@@ -73,11 +94,161 @@
             <img src = "images/dadinpic.jpg" alt = "dad, mom, and eric in front of hot springs"/>
             <figcaption>Dad Makes it in the Picture!</figcaption>
         </figure>
+        <figure id="S">
+            <img src = "images/ericpic.jpg" alt = "eric taking a picture on his phone"/>
+            <figcaption>Eric Takes a Photo on Phone</figcaption>
+        </figure>
+        </div>
+
+		<div id="gameSpace">
+			<h1>Play a Game!</h1>
+			<p>Correctly guess who took each of these pictures to see a bonus picture of everyone together!
+				There are 4 rounds, each person can be selected only once.
+			</p>
+			<p id="correct">Correct!</p>
+			<p id="gameText">Round 1</p>
+			<img src="images/gameClaire.jpg" alt = "chipmunk with flower" class = 'gamePic' id='Claire'/>
+			<img src="images/gameMom.jpg" alt = "mountains and clouds" class = 'gamePic' id='Mom'/>
+			<img src="images/gameDad.jpg" alt = "two people in car" class = 'gamePic' id='Dad'/>
+			<img src="images/gameEric.jpg" alt = "deer in front of mountains" class = 'gamePic' id='Eric'/>
+			<button onclick="gameDad()" class="gameButton">Dad</button>
+			<button onclick="gameMom()" class="gameButton">Mom</button>
+			<button onclick="gameClaire()" class="gameButton">Claire</button>
+			<button onclick="gameEric()" class="gameButton">Eric</button>
+		</div>
+        
 	</main>
 
 	<footer>
-		<p>Claire Wan</p>
+		<p>Claire Wan ~ Yellowsone Photographs</p>
 	</footer>
+
+    <script>
+		function changeLanguage(item) {
+			console.log('button pressed')
+			// console.log(document.get)
+			var ch = document.getElementsByClassName('ch');
+			var en = document.getElementsByClassName('en');
+			console.log("inner text: " + 	item.innerText)
+			// console.log(item.innerText)
+			if (item.innerText == 'English') {
+				console.log("ENGLISH")
+				for (let i = 0; i < ch.length; i++) {
+					ch[i].style.display = "none";
+					en[i].style.display = "block";
+				}
+				item.innerText = '中文'
+			}
+			else {
+				console.log("CHINESE")
+				for (let i = 0; i < ch.length; i++) {
+					ch[i].style.display = "block";
+					en[i].style.display = "none";
+				}
+				item.innerText = 'English'
+			}
+		}
+		function gameClaire() {
+			var text = document.getElementById('gameText');
+			document.getElementById('correct').style.display = "block";
+
+			var round1 = document.getElementById('Claire');
+			var round2 = document.getElementById('Mom');
+
+			if (text.innerText == 'Round 1') {
+				text.innerText = 'Round 2';
+				round1.style.display = 'none';
+				round2.style.display = 'block';
+			}
+			else {
+				document.getElementById('correct').style.display = "none";
+				text.innerText = "Wrong, Game Over";
+				
+				var images = document.getElementsByClassName('gamePic');
+				for (let i = 0; i < images.length; i++) {
+					images[i].style.display = 'none';
+				}
+
+				var buttons = document.getElementsByClassName('gameButton');
+				for (let i = 0; i < buttons.length; i++) {
+					buttons[i].style.display = "none";
+				}
+			}
+		}
+		function gameMom() {
+			var text = document.getElementById('gameText');
+
+			var round2 = document.getElementById('Mom');
+			var round3 = document.getElementById('Dad');
+
+			if (text.innerText == 'Round 2') {
+				text.innerText = 'Round 3'
+				round2.style.display = 'none';
+				round3.style.display = 'block';
+			}
+			else {
+				document.getElementById('correct').style.display = "none";
+				text.innerText = "Wrong, Game Over";
+
+				var images = document.getElementsByClassName('gamePic');
+				for (let i = 0; i < images.length; i++) {
+					images[i].style.display = 'none';
+				}
+
+				var buttons = document.getElementsByClassName('gameButton');
+				for (let i = 0; i < buttons.length; i++) {
+					buttons[i].style.display = "none";
+				}
+			}
+		}
+		function gameDad() {
+			var text = document.getElementById('gameText');
+
+			var round3 = document.getElementById('Dad');
+			var round4 = document.getElementById('Eric');
+
+			if (text.innerText == 'Round 3') {
+				text.innerText = 'Round 4'
+				round3.style.display = 'none';
+				round4.style.display = 'block';
+			}
+			else {
+				document.getElementById('correct').style.display = "none";
+				text.innerText = "Wrong, Game Over";
+
+				var images = document.getElementsByClassName('gamePic');
+				for (let i = 0; i < images.length; i++) {
+					images[i].style.display = 'none';
+				}
+				
+				var buttons = document.getElementsByClassName('gameButton');
+				for (let i = 0; i < buttons.length; i++) {
+					buttons[i].style.display = "none";
+				}
+			}
+		}
+		function gameEric() {
+			var text = document.getElementById('gameText');
+			
+			var round4 = document.getElementById('Eric');
+			if (text.innerText == 'Round 4') {
+				text.innerText = 'Congrats, you win! However, there actually does not exist a picture with all of us at Yellowstone so you win nothing.';
+				round4.style.display = 'none';
+			}
+			else {
+				document.getElementById('correct').style.display = "none";
+				text.innerText = "Wrong, Game Over";
+				var images = document.getElementsByClassName('gamePic');
+				for (let i = 0; i < images.length; i++) {
+					images[i].style.display = 'none';
+				}
+				var buttons = document.getElementsByClassName('gameButton');
+				for (let i = 0; i < buttons.length; i++) {
+					buttons[i].style.display = "none";
+				}
+			}
+		}
+	</script>
 </body>
 </html>
 
