@@ -100,7 +100,7 @@ img {
     width: 325px;
     margin: 5px;
 }
-img:not(#camera){
+img:not(.special){
     border: 3px solid #477d55;
     margin-bottom: 8px;
     padding: 1px;
@@ -118,10 +118,6 @@ img:hover:not(#camera) {
 
 .gallery figure:nth-child(odd) img:hover {
     box-shadow: 10px 10px #415ba1;
-}
-
-.gamePic {
-    filter: none !important;
 }
 
 figure {
