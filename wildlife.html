@@ -45,50 +45,44 @@
 		</p>
 
 		<div class='gridGallery'>
-		<figure id="J">
-            <img src = "images/bear.jpg" alt = "two grizzlies by a dam " onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Grizzlies near Jackson River Dam</figcaption>
+		<figure id="J" onmouseover="color(this)"
+		onmouseout="blackwhite(this)">
+            <img src = "images/bear.jpg" alt = "two grizzlies by a dam " class='image'/>
+            <figcaption class="fig_text">Grizzlies near Jackson River Dam</figcaption>
         </figure>
-		<figure id="K">
-            <img src = "images/bird.jpg" alt = "bird in sky" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Bird spotted in the sky</figcaption>
+		<figure id="K" onmouseover="color(this)"
+		onmouseout="blackwhite(this)">
+            <img src = "images/bird.jpg" alt = "bird in sky" class='image'/>
+            <figcaption class="fig_text">Bird spotted in the sky</figcaption>
         </figure>
-		<figure id="L">
-            <img src = "images/bison.jpg" alt = "bison by shrubbery" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Bison near Lamar Valley</figcaption>
+		<figure id="L" onmouseover="color(this)"
+		onmouseout="blackwhite(this)">
+            <img src = "images/bison.jpg" alt = "bison by shrubbery" class='image'/>
+            <figcaption class="fig_text">Bison near Lamar Valley</figcaption>
         </figure>
-		<figure id="M">
-            <img src = "images/bisons.jpg" alt = "two bisons, a baby bison, and some birds by some hot springs" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Family of Bison and Birds near Hot Springs</figcaption>
+		<figure id="M" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/bisons.jpg" alt = "two bisons, a baby bison, and some birds by some hot springs" class='image'/>
+            <figcaption class="fig_text">Family of Bison and Birds near Hot Springs</figcaption>
         </figure>
-		<figure id="N">
-            <img src = "images/cranes.jpg" alt = "two cranes in a field" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Sandhill Cranes at Willow Flats</figcaption>
+		<figure id="N" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/cranes.jpg" alt = "two cranes in a field" class='image'/>
+            <figcaption class="fig_text">Sandhill Cranes at Willow Flats</figcaption>
         </figure>
-		<figure id="O">
-            <img src = "images/moose.jpg" alt = "moose standing in grass by the river" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Moose by Moose Wilson Road</figcaption>
+		<figure id="O" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/moose.jpg" alt = "moose standing in grass by the river" class='image'/>
+            <figcaption class="fig_text">Moose by Moose Wilson Road</figcaption>
         </figure>
-		<figure id="P">
-            <img src = "images/killdeer.jpg" alt = "killdeer standing in the grass" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Killdeer at Mammoth Hot Springs</figcaption>
+		<figure id="P" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/killdeer.jpg" alt = "killdeer standing in the grass" class='image'/>
+            <figcaption class="fig_text">Killdeer at Mammoth Hot Springs</figcaption>
         </figure>
-		<figure id="Q">
-            <img src = "images/muledeer.jpg" alt = "mule deer eating flowers" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Mule Deer at Mammoth Hot Springs</figcaption>
+		<figure id="Q" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/muledeer.jpg" alt = "mule deer eating flowers" class='image'/>
+            <figcaption class="fig_text">Mule Deer at Mammoth Hot Springs</figcaption>
         </figure>
-		<figure id="R">
-            <img src = "images/pronghorn.jpg" alt = "pronghorn in a field" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Pronghorn at Lamar Valley</figcaption>
+		<figure id="R" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/pronghorn.jpg" alt = "pronghorn in a field" class='image'/>
+            <figcaption class="fig_text">Pronghorn at Lamar Valley</figcaption>
         </figure>
 		</div>
 		
@@ -125,13 +119,20 @@
 		}
 		function color(item) {
 			console.log(item)
-			item.style.filter = 'none'
-			item.style.transition = '0.75s'
+			var image = item.getElementsByClassName('image')[0];
+			var text = item.getElementsByClassName('fig_text')[0];
+			console.log(image)
+			image.style.filter = 'none'
+			image.style.transition = '0.75s'
+			text.style.display = 'table-caption';
 		}
 		function blackwhite(item) {
-			console.log(item)
-			item.style.filter = 'grayscale(100%)'
-			item.style.transition = '0.75s'
+			var image = item.getElementsByClassName('image')[0];
+			var text = item.getElementsByClassName('fig_text')[0];
+			console.log(image)
+			image.style.filter = 'grayscale(100%)'
+			image.style.transition = '0.75s'
+			text.style.display = 'none';
 		}
 	</script>
 </body>

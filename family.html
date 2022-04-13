@@ -58,15 +58,13 @@
         </p>
 
         <div class='gridGallery' id="specialgrid">
-		<figure>
-            <img src = "images/claireeric.jpg" alt = "claire and eric by a river" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Claire and Eric by Snake River</figcaption>
+		<figure onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/claireeric.jpg" alt = "claire and eric by a river" class='image'/>
+            <figcaption class="fig_text">Claire and Eric by Snake River</figcaption>
         </figure>
-		<figure>
-            <img src = "images/momclaire.jpg" alt = "mom posing with claire stretching in the background at an overlook" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Mom and Claire at Overlook</figcaption>
+		<figure onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/momclaire.jpg" alt = "mom posing with claire stretching in the background at an overlook" class='image'/>
+            <figcaption class="fig_text">Mom and Claire at Overlook</figcaption>
         </figure>
         </div>
 
@@ -80,30 +78,25 @@
         
 
         <div class='gridGallery'>
-        <figure>
-            <img src = "images/clairecamera.jpg" alt = "claire takes photo of old faithful with camera" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Claire Steals Dad's Camera to Take Photos</figcaption>
+        <figure onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/clairecamera.jpg" alt = "claire takes photo of old faithful with camera" class='image'/>
+            <figcaption class="fig_text">Claire Steals Dad's Camera to Take Photos</figcaption>
         </figure>
-		<figure>
-            <img src = "images/momphone.jpg" alt = "mom takes photo on iphone on a boardwalk" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Mom Takes Photos on iPhone</figcaption>
+		<figure onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/momphone.jpg" alt = "mom takes photo on iphone on a boardwalk" class='image'/>
+            <figcaption class="fig_text">Mom Takes Photos on iPhone</figcaption>
         </figure>
-		<figure>
-            <img src = "images/ericozmo.jpg" alt = "eric takes a panorma picture with ozmo" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Eric Takes a Photo on Ozmo</figcaption>
+		<figure onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/ericozmo.jpg" alt = "eric takes a panorma picture with ozmo" class='image'/>
+            <figcaption class="fig_text">Eric Takes a Photo on Ozmo</figcaption>
         </figure>
-        <figure>
-            <img src = "images/dadinpic.jpg" alt = "dad, mom, and eric in front of hot springs" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Dad Makes it in the Picture!</figcaption>
+        <figure onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/dadinpic.jpg" alt = "dad, mom, and eric in front of hot springs" class='image'/>
+            <figcaption class="fig_text">Dad Makes it in the Picture!</figcaption>
         </figure>
-        <figure id="S">
-            <img src = "images/ericpic.jpg" alt = "eric taking a picture on his phone" onmouseover="color(this)"
-			onmouseout="blackwhite(this)"/>
-            <figcaption>Eric Takes a Photo on Phone</figcaption>
+        <figure id="S" onmouseover="color(this)" onmouseout="blackwhite(this)">
+            <img src = "images/ericpic.jpg" alt = "eric taking a picture on his phone" class='image'/>
+            <figcaption class="fig_text">Eric Takes a Photo on Phone</figcaption>
         </figure>
         </div>
 
@@ -257,13 +250,20 @@
 		}
 		function color(item) {
 			console.log(item)
-			item.style.filter = 'none'
-			item.style.transition = '0.75s'
+			var image = item.getElementsByClassName('image')[0];
+			var text = item.getElementsByClassName('fig_text')[0];
+			console.log(image)
+			image.style.filter = 'none'
+			image.style.transition = '0.75s'
+			text.style.display = 'table-caption';
 		}
 		function blackwhite(item) {
-			console.log(item)
-			item.style.filter = 'grayscale(100%)'
-			item.style.transition = '0.75s'
+			var image = item.getElementsByClassName('image')[0];
+			var text = item.getElementsByClassName('fig_text')[0];
+			console.log(image)
+			image.style.filter = 'grayscale(100%)'
+			image.style.transition = '0.75s'
+			text.style.display = 'none';
 		}
 	</script>
 </body>

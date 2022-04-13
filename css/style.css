@@ -126,8 +126,9 @@ figure {
 }
 
 figcaption {
-    display: table-caption;
+    display: none;
     caption-side: bottom;
+    text-align: center;
 }
 
 /* grid */
