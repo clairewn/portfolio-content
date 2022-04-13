@@ -121,7 +121,7 @@ img:hover:not(#camera) {
 }
 
 .gamePic {
-    filter: none;
+    filter: none !important;
 }
 
 figure {
