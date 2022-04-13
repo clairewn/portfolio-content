@@ -120,7 +120,7 @@ img:hover:not(#camera) {
     box-shadow: 10px 10px #415ba1;
 }
 
-#gamePic {
+.gamePic {
     filter: none;
 }
 
