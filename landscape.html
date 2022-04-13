@@ -50,39 +50,48 @@
 
         <div class='gridGallery'>
 		<figure id="A">
-            <img src = "images/blackpool.jpg" alt = "blue hot spring"/>
+            <img src = "images/blackpool.jpg" alt = "blue hot spring" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Black Pool of West Thumb Geyser Basin</figcaption>
         </figure>
 		<figure id="B">
-            <img src = "images/grandprismaticspring.jpg" alt = "colorful spring with trees in front"/>
+            <img src = "images/grandprismaticspring.jpg" alt = "colorful spring with trees in front" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Grand Prismatic Spring</figcaption>
         </figure>
 		<figure id="C">
-            <img src = "images/lamarvalley.jpg" alt = "grass with hills in the background"/>
+            <img src = "images/lamarvalley.jpg" alt = "grass with hills in the background" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Lamar Valley</figcaption>
         </figure>
 		<figure id="D">
-            <img src = "images/mammothhotsprings.jpg" alt = "white hot springs with mountain background"/>
+            <img src = "images/mammothhotsprings.jpg" alt = "white hot springs with mountain background" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Mammoth Hot Springs with Mt Everts in Background</figcaption>
         </figure>
 		<figure id="E"> 
-            <img src = "images/sunstarburst.jpg" alt = "sun shining through tree"/>
+            <img src = "images/sunstarburst.jpg" alt = "sun shining through tree" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Sun Star Burst through the Tree at 44.969956855632034, -110.70268118221108</figcaption>
         </figure>
         <figure id="F">
-            <img src = "images/sunset.jpg" alt = "sunset over springs"/>
+            <img src = "images/sunset.jpg" alt = "sunset over springs" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Sunset Near Old Faithful</figcaption>
         </figure>
 		<figure id="G">
-            <img src = "images/moonrise.jpg" alt = "moon in dark blue sky"/>
+            <img src = "images/moonrise.jpg" alt = "moon in dark blue sky" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Moon Rise at Hayden Valley Overlook</figcaption>
         </figure>
 		<figure id="H">
-			<img src = "images/westthumb.jpg" alt = "hot springs in front of lake"/>
+			<img src = "images/westthumb.jpg" alt = "hot springs in front of lake" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>West Thumb View</figcaption>
         </figure>
 		<figure id="I">
-			<img src = "images/lonepine.jpg" alt = "lone pine tree"/>
+			<img src = "images/lonepine.jpg" alt = "lone pine tree" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Lone Pine Tree across Heron Pond (185 m away) and Grand Teton  Peak in Background (13 mi away)</figcaption>
         </figure>
     </div>
@@ -116,6 +125,16 @@
 				}
 				item.innerText = 'English'
 			}
+		}
+		function color(item) {
+			console.log(item)
+			item.style.filter = 'none'
+			item.style.transition = '0.75s'
+		}
+		function blackwhite(item) {
+			console.log(item)
+			item.style.filter = 'grayscale(100%)'
+			item.style.transition = '0.75s'
 		}
 	</script>
 </body>

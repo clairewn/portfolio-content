@@ -59,11 +59,13 @@
 
         <div class='gridGallery' id="specialgrid">
 		<figure>
-            <img src = "images/claireeric.jpg" alt = "claire and eric by a river"/>
+            <img src = "images/claireeric.jpg" alt = "claire and eric by a river" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Claire and Eric by Snake River</figcaption>
         </figure>
 		<figure>
-            <img src = "images/momclaire.jpg" alt = "mom posing with claire stretching in the background at an overlook"/>
+            <img src = "images/momclaire.jpg" alt = "mom posing with claire stretching in the background at an overlook" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Mom and Claire at Overlook</figcaption>
         </figure>
         </div>
@@ -79,23 +81,28 @@
 
         <div class='gridGallery'>
         <figure>
-            <img src = "images/clairecamera.jpg" alt = "claire takes photo of old faithful with camera"/>
+            <img src = "images/clairecamera.jpg" alt = "claire takes photo of old faithful with camera" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Claire Steals Dad's Camera to Take Photos</figcaption>
         </figure>
 		<figure>
-            <img src = "images/momphone.jpg" alt = "mom takes photo on iphone on a boardwalk"/>
+            <img src = "images/momphone.jpg" alt = "mom takes photo on iphone on a boardwalk" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Mom Takes Photos on iPhone</figcaption>
         </figure>
 		<figure>
-            <img src = "images/ericozmo.jpg" alt = "eric takes a panorma picture with ozmo"/>
+            <img src = "images/ericozmo.jpg" alt = "eric takes a panorma picture with ozmo" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Eric Takes a Photo on Ozmo</figcaption>
         </figure>
         <figure>
-            <img src = "images/dadinpic.jpg" alt = "dad, mom, and eric in front of hot springs"/>
+            <img src = "images/dadinpic.jpg" alt = "dad, mom, and eric in front of hot springs" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Dad Makes it in the Picture!</figcaption>
         </figure>
         <figure id="S">
-            <img src = "images/ericpic.jpg" alt = "eric taking a picture on his phone"/>
+            <img src = "images/ericpic.jpg" alt = "eric taking a picture on his phone" onmouseover="color(this)"
+			onmouseout="blackwhite(this)"/>
             <figcaption>Eric Takes a Photo on Phone</figcaption>
         </figure>
         </div>
@@ -247,6 +254,16 @@
 					buttons[i].style.display = "none";
 				}
 			}
+		}
+		function color(item) {
+			console.log(item)
+			item.style.filter = 'none'
+			item.style.transition = '0.75s'
+		}
+		function blackwhite(item) {
+			console.log(item)
+			item.style.filter = 'grayscale(100%)'
+			item.style.transition = '0.75s'
 		}
 	</script>
 </body>

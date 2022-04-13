@@ -100,12 +100,12 @@ img {
     width: 325px;
     margin: 5px;
 }
-
 img:not(#camera){
     border: 3px solid #477d55;
     margin-bottom: 8px;
     padding: 1px;
     border-radius: 5%;
+    filter: grayscale(100%);
 }
 
 img:hover:not(#camera) {
@@ -515,3 +515,4 @@ textarea {
         width: 650px;
     }
 }
+
