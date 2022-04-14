@@ -16,6 +16,12 @@ p {
     }
 }
 
+@media screen and (min-width: 700px) {
+    .mobile {
+        display: none;
+    }
+}
+
 h1 {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -119,7 +125,7 @@ img:hover:not(#camera) {
 .gallery figure:nth-child(odd) img:hover {
     box-shadow: 10px 10px #415ba1;
 }
-
+    
 figure {
     display: table;
     margin: 10px;
